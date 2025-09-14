@@ -8,6 +8,7 @@ A FastAPI-based backend service that extracts clearly defined project milestones
 - Automatic rejection (status `failed`) when required milestone details are missing or unclear
 - Supports OpenAI (`gpt-5-nano` placeholder) or Gemini (`gemini-2.5-flash`) models
 - Dockerized for easy deployment
+- Simple static demo page (`index.html`) for manual testing
 
 ## Tech Stack
 - FastAPI
@@ -48,6 +49,12 @@ uvicorn main:app --reload
 Service runs at: http://localhost:8000
 
 OpenAPI docs: http://localhost:8000/docs
+
+## Quick Demo (index.html)
+A lightweight static demo client is provided as `index.html`.
+
+Open it directly in a browser while the backend is running. It sends a multipart POST to `/upload` and renders the JSON response.
+
 
 ## API Endpoint
 ### POST /upload
@@ -130,6 +137,7 @@ models/milestone_models.py     # Pydantic response models
 utils/extract.py       # File loaders & text cleaning
 utils/llm_selector.py  # Selects OpenAI or Gemini client
 documents/             # Uploaded source files
+index.html             # Simple static demo frontend
 app.log                # Runtime log with extraction history
 ```
 
