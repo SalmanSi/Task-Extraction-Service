@@ -9,3 +9,6 @@ langchain-google-genai
 pydantic
 dateparser
 python-dotenv
+fastapi
+uvicorn
+python-multipart 
