@@ -1,0 +1,11 @@
+langchain
+langchain-community
+pypdf
+unstructured
+python-docx
+langchain-core
+langchain-openai
+langchain-google-genai
+pydantic
+dateparser
+python-dotenv

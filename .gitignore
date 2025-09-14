@@ -1,0 +1,4 @@
+/tasks
+.env
+*__pycache__
+.~*
