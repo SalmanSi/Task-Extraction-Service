@@ -156,3 +156,4 @@ MIT
 
 ## Future Improvements
 - Add authentication for upload endpoint
+- add vector db
