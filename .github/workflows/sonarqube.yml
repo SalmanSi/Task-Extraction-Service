@@ -1,0 +1,30 @@
+name: SonarQube Analysis
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  sonar:
+    name: SonarQube Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Important for SonarQube branch analysis
+
+      - name: Setup Java (required for SonarScanner)
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+
+      - name: SonarQube Scan
+        uses: sonarsource/sonarqube-scan-action@v2
+        with:
+          projectBaseDir: .
+        env:
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
