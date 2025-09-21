@@ -153,3 +153,6 @@ app.log                # Runtime log with extraction history
 
 ## License
 MIT
+
+## Future Improvements
+- Add authentication for upload endpoint
